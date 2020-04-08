@@ -1,5 +1,5 @@
 <div class="word-container py-3">
-    <span class="char mx-3" *ngFor="let char of wordCharArray">
-        {{ char }}
+    <span class="char mx-2" *ngFor="let char of wordCharArray">
+        {{ lettersGuessed.includes(char) || userWonGame === true || userWonGame === false ? char : '_' }}
     </span>
 </div>

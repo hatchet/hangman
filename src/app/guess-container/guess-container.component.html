@@ -1,8 +1,15 @@
 <form class="form-inline">
     <div class="form-group mb-2">
         <label for="letter">Enter a letter</label>
-        <input type="text" class="form-control mx-2" id="letter" maxlength="1" [(ngModel)]="letter">
+        <input type="text" class="form-control mx-2" id="letter" name="letter" maxlength="1"
+            #letterElement [(ngModel)]="letter" (keyup.enter)="guessButtonClick()" [disabled]="userWonGame === true || userWonGame === false">
     </div>
-    <button type="button" class="btn btn-primary mb-2 mr-2" (click)="guessButtonClick()">Guess</button>
+    <button type="button" class="btn btn-primary mb-2 mr-2" (click)="guessButtonClick()" [disabled]="userWonGame === true || userWonGame === false">Guess</button>
     <button type="button" class="btn btn-primary mb-2" (click)="startOverButtonClick()">Start Over</button>
+    <span class="error mb-2 ml-2" *ngIf="duplicateLetter">
+        duplicate letter
+    </span>
+    <span class="error mb-2 ml-2" *ngIf="invalidCharacter">
+        invalid character
+    </span>
 </form>

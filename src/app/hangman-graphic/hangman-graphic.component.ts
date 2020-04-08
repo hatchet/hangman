@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 export class HangmanGraphicComponent implements OnInit, OnDestroy {
   imgSrc = '';
   incorrectGuessCountSubscription: Subscription;
-  userWonGame = false;
+  userWonGame = null;
   userWonGameSubscription: Subscription;
 
   constructor(private dataService: DataService) { }

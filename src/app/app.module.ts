@@ -9,6 +9,7 @@ import { HangmanContainerComponent } from './hangman-container/hangman-container
 import { WordContainerComponent } from './word-container/word-container.component';
 import { GuessContainerComponent } from './guess-container/guess-container.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LettersGuessedComponent } from './letters-guessed/letters-guessed.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HangmanGraphicComponent,
     HangmanContainerComponent,
     WordContainerComponent,
-    GuessContainerComponent
+    GuessContainerComponent,
+    LettersGuessedComponent
   ],
   imports: [
     BrowserModule,
