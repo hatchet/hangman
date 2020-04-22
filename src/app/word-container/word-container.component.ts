@@ -31,5 +31,7 @@ export class WordContainerComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.wordSubscription.unsubscribe();
+    this.lettersGuessedSubscription.unsubscribe();
+    this.userWonGameSubscription.unsubscribe();
   }
 }
